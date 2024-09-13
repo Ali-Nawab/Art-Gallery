@@ -1,0 +1,82 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: #4B6F44;
+    --clr-primary-2: #39692f;
+    --clr-primary-3: #2b7a1b;
+  
+    --clr-white: #fff;
+    --ff-primary: "Lato", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .art-portfolio{
+    margin-top: 8rem;
+  }
+  .art-portfolio-title{
+    margin-top: 2rem;
+    color: var(--clr-primary-1);
+  }
+  .art-portfolio-center{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+  }
+  .art-portfolio-box{
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    max-height: 350px;
+  }
+    .art-portfolio-box:hover{
+        box-shadow: var(--dark-shadow);
+    }
+    .art-portfolio-img img{
+        width: 100%;
+        height: 200px;
+        display: block;
+        border-radius: var(--radius);
+        transition: var(--transition);
+    }
+    .art-portfolio-img:hover{
+        opacity: 0.5;
+    }
+.artName{
+    margin: 0.6rem 0;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--clr-primary-1);
+    text-align: center;
+    font-weight: 700;
+}
+.artPrice{
+    color: var(--clr-primary-3);
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
+    text-align: center;
+    font-weight: 700;
+}
+.art-portfolio-btn{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    border: none;
+    background: var(--clr-primary-2);
+    color: var(--clr-white);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.art-portfolio-btn:hover{
+    background: var(--clr-primary-1);
+}

@@ -1,0 +1,135 @@
+/* 
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: #4B6F44;
+  --clr-primary-2: #39692f;
+  --clr-primary-3: #2b7a1b;
+
+  --clr-white: #fff;
+  --ff-primary: "Lato", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+
+.section{
+    padding: 5rem 0;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.section-title h2{
+    text-transform: uppercase;
+}
+.section-title span{
+    color: var(--clr-primary-5);
+}
+.section-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+@media screen and (min-width: 992px){
+    .section-center{
+        width: 95vw;
+    }
+}
+
+
+/*
+===============
+Portfolio
+===============
+*/
+.portfolio{
+    margin-top: 5rem;
+}
+.portfolio h2{
+    color: var(--clr-primary-1);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.portfolio-title{
+    margin-bottom: 1.3rem;
+}
+.portfolio-img img, .related-img img{
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+    transition: var(--transition);
+}
+.portfolio-img img:hover, .related-img img:hover{
+    box-shadow: var(--light-shadow);
+}
+.portfolio-img{
+    margin-bottom: 2rem;
+}
+.portfolio-info p{
+    font-size: 1.25rem;
+    color: var(--clr-primary-3);
+    text-align: justify;
+}
+.portfolio-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.portfolio-img, .portfolio-info{
+    flex: 1 1 (calc(100% / 2 - 1rem));
+}
+
+.related-img{
+    position: relative;
+}
+.related-img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-primary-1);
+    opacity: 0;
+    transition: var(--transition);
+}
+.related-img:hover::before{
+    opacity: 0.5;
+}
+.related-art{
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--dark-shadow);
+}
+.related-btn{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+}
+.related-work{
+  display: grid;
+  grid-template-columns: repeat(auto-filt, minmax(250px, 1fr));
+  gap: 1rem;
+}

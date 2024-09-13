@@ -1,0 +1,89 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: #4B6F44;
+    --clr-primary-2: #39692f;
+    --clr-primary-3: #2b7a1b;
+  
+    --clr-white: #fff;
+    --ff-primary: "Lato", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+/* General styles */
+.arts-title {
+    margin-top: 8rem;
+    color: var(--clr-primary-1);
+  }
+  
+  .arts-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Card (box) styling */
+  .arts-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dark shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Fixed width for all cards */
+    height: 350px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .arts-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+  }
+  
+  /* Image styles */
+  .arts-img {
+    flex: 1;
+    width: 100%;
+    height: 70%; /* Make the image occupy 70% of the card height */
+    overflow: hidden;
+  }
+  
+  .arts-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  /* Info styles */
+  .arts-info {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f4f4f4;
+    height: 30%; /* 30% height for the text */
+  }
+  
+  .arts-info h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive behavior */
+  @media screen and (min-width: 576px) {
+    .arts-box {
+      flex: 1 1 calc(50% - 2rem); /* Two cards per row */
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .arts-box {
+      flex: 1 1 calc(33% - 2rem); /* Three cards per row */
+    }
+  }
+  
