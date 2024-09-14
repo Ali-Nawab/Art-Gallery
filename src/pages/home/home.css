@@ -241,6 +241,9 @@ p {
   Popular Arts
   =====================
   */
+  .popular{
+    padding: 1rem 0;
+  }
   .popular-title{
     width: 60%;
     margin: 2rem auto;
@@ -318,6 +321,9 @@ p {
   New Arrival
   =====================
   */
+  .newArrival{
+    padding: 1rem 0;
+  }
   .newArrival-title{
     width: 60%;
     margin: 2rem auto;
@@ -422,11 +428,13 @@ p {
   Artists
   =====================
   */
-
+  .artist{
+    padding: 1rem 0;
+  }
 .artist-title{
   width: 60%;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   color: var(--clr-primary-3);
 }
 .artist-info{
